@@ -1,0 +1,125 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center; /* ensures all items (logo, links, buttons) align vertically */
+  justify-content: space-between;
+  padding: 8px 60px; /* same padding for uniform alignment */
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links li a:hover {
+  color: burlywood;
+  border-bottom: 2px solid burlywood;
+  padding-bottom: 4px;
+}
+
+/* Button Section (aligned same as nav links) */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Login Button (Blue glow) */
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(173, 216, 230, 0.25);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 8px rgba(173, 216, 230, 0.4);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: rgba(173, 216, 230, 0.45);
+  box-shadow: 0 0 12px rgba(173, 216, 230, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Signup Button (Burlywood glow) */
+.signup-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: burlywood;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+  background: #d8a763;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(218, 165, 32, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 25px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+}
