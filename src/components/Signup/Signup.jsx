@@ -3,6 +3,7 @@ import "./Signup.css";
 import bgImage from "../../assets/Login.jpeg"; 
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { API_BASE_URL } from "../../config/api";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/users/register",
+        `${API_BASE_URL}/users/register`,
         payload,
         {
           headers: { "Content-Type": "application/json" },
