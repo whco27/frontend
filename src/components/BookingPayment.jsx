@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { DARAJA_API_URL } from '../config/api';
 
 const BookingPayment = () => {
     const [amount, setAmount] = useState('');
@@ -8,7 +9,7 @@ const BookingPayment = () => {
     const handlePayment = async () => {
         // Add Daraja payment API logic here
         try {
-            const response = await axios.post('/path/to/daraja/api', {
+            const response = await axios.post(`${DARAJA_API_URL}/stk-push`, {
                 amount,
                 phoneNumber,
                 // additional necessary parameters

@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { DARAJA_API_URL } from '../config/api';
 
-const BASE_URL = 'https://api.paymentprovider.com';
+const BASE_URL = DARAJA_API_URL;
 
 /**
  * Initiates an STK push to a user.
